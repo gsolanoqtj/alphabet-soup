@@ -1,0 +1,17 @@
+.as {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+}
+
+.as-row {
+    display: flex;
+    flex: 1;
+}
+
+.as-col {
+    flex: 1;
+    text-align: center;
+    border: 1px solid black;
+}

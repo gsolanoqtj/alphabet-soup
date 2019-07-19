@@ -1,0 +1,20 @@
+<div>
+    <label for="numRows">numRows</label>
+    <input type="number" id="numRows" placeholder="filter word" [(ngModel)]="numRows">
+</div>
+<div>
+    <label for="numColumns">numColumns</label>
+    <input type="number" id="numColumns" placeholder="filter word" [(ngModel)]="numColumns">
+</div>
+<button (click)="loadData()">Load Data</button>
+<br>
+<div>
+    <label for="filterWord">filterWord</label>
+    <input type="text" id="filterWord" placeholder="filter word" [(ngModel)]="filterWord">
+</div>
+<button (click)="search()">Search</button>
+<div class="as">
+    <div *ngFor="let row of data; let indexRow = index;" class="as-row">
+        <div *ngFor="let col of row; let indexCol = index" [style.backgroundColor]="getBackgroundColor(indexRow, indexCol)" class="as-col">{{ col }}</div>
+    </div>
+</div>
